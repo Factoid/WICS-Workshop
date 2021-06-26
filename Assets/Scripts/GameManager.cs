@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,6 +11,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private UnityEvent GameOver;
+
+    [SerializeField]
+    private HealthManager damageSink;
+
+    public void AwardTime(float amount)
+    {
+        TimeLeft += amount;
+    }
 
     public float TimeLeft { get; private set; }
     // Start is called before the first frame update
@@ -24,7 +33,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         TimeLeft -= Time.deltaTime;
-        if( TimeLeft <= 0 )
+        if (TimeLeft <= 0 || damageSink.NormalizedHealth <= 0)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

@@ -125,3 +125,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 5096712854660508183, guid: ce29e9a8563237940b2a8800763cdc64,
     type: 3}
+  damage: 5

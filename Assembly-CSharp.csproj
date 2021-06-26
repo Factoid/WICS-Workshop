@@ -63,20 +63,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AITargeting.cs" />
-    <Compile Include="Assets\PlayerFire.cs" />
+    <Compile Include="Assets\AreaSpawner.cs" />
+    <Compile Include="Assets\IntervalGenerator.cs" />
+    <Compile Include="Assets\Scripts\AIDriver.cs" />
+    <Compile Include="Assets\Scripts\AITargeting.cs" />
+    <Compile Include="Assets\Scripts\AmmoRefill.cs" />
+    <Compile Include="Assets\Scripts\AmmoTracker.cs" />
     <Compile Include="Assets\Scripts\Driver.cs" />
     <Compile Include="Assets\Scripts\ExplodeOnContact.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
+    <Compile Include="Assets\Scripts\HealthDisplay.cs" />
+    <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\OrientToCamera.cs" />
+    <Compile Include="Assets\Scripts\PlayerFire.cs" />
     <Compile Include="Assets\Scripts\Rotator.cs" />
     <Compile Include="Assets\Scripts\ScoreChanger.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\ScoreViewer.cs" />
     <Compile Include="Assets\Scripts\Shooter.cs" />
+    <Compile Include="Assets\Scripts\Spinner.cs" />
     <Compile Include="Assets\Scripts\TargetGenerator.cs" />
     <Compile Include="Assets\Scripts\TimeViewer.cs" />
+    <Compile Include="Assets\Scripts\Wiggler.cs" />
+    <Compile Include="Assets\TimeChanger.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

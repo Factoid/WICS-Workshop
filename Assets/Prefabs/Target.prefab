@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4052969925990936294}
   - component: {fileID: 4052969925990936295}
   - component: {fileID: 4052969925990936296}
+  - component: {fileID: 7582124164707617008}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -109,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 0}
+  damage: 0
 --- !u!114 &4052969925990936295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,5 +135,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8bb215064eb4054e9827d11dc507313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManager: {fileID: 0}
+  scoreMananger: {fileID: 0}
   amount: 100
+--- !u!114 &7582124164707617008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052969925990936289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 472f7897bc350f14582893d413e0edf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 3
+  gameManager: {fileID: 0}

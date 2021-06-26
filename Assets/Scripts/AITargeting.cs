@@ -46,4 +46,12 @@ public class AITargeting : MonoBehaviour
             }
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (currentTarget == null) return;
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawLine(transform.position, currentTarget.position);
+        Gizmos.DrawWireSphere(currentTarget.position, 2.0f);
+    }
 }

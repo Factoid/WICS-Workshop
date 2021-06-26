@@ -7,35 +7,27 @@ public class TargetGenerator : MonoBehaviour
     [SerializeField]
     private ScoreManager scoreManager;
     [SerializeField]
-    private GameObject targetPrefab;
-    [SerializeField]
-    private Bounds spawnArea;
+    private GameManager gameManager;
     [SerializeField]
     private int numberToSpawn;
+    [SerializeField]
+    private AreaSpawner spawner;
 
     private void Awake()
     {
         if (scoreManager == null) scoreManager = GetComponent<ScoreManager>();
+        if (gameManager == null) gameManager = GetComponent<GameManager>();
     }
     // Start is called before the first frame update
     void Start()
     {
         for( var i = 0; i < numberToSpawn; ++i )
         {
-            Vector3 pos;
-            pos.x = Random.Range(spawnArea.min.x, spawnArea.max.x);
-            pos.y = Random.Range(spawnArea.min.y, spawnArea.max.y);
-            pos.z = Random.Range(spawnArea.min.z, spawnArea.max.z);
-
-            var go = Instantiate(targetPrefab, pos, Quaternion.identity);
+            var go = spawner.SpawnAndReturn();
             var sc = go.GetComponent<ScoreChanger>();
             sc.scoreMananger = scoreManager;
+            var tc = go.GetComponent<TimeChanger>();
+            tc.gameManager = gameManager;
         }    
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(spawnArea.center, spawnArea.size);
     }
 }
