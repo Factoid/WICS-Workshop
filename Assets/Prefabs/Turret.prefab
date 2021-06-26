@@ -57,8 +57,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8891341894894024043}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.00000001312, y: 0.00000001312, z: 0.601}
-  m_LocalScale: {x: 0.27989, y: 0.25, z: 0.27989}
+  m_LocalPosition: {x: 0.00000001312, y: 0.00000001312, z: 0.85}
+  m_LocalScale: {x: 0.27989, y: 0.44, z: 0.27989}
   m_Children:
   - {fileID: 455715832464796894}
   m_Father: {fileID: 8891341894991507152}
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 6783433829597354885}
   - component: {fileID: 8891341894991507153}
   m_Layer: 0
-  m_Name: Tank
+  m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

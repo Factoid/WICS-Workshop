@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
+    //[SerializeField]
+    //private float rotSpeed = ;
+
     private float yaw;
     private float pitch;
     // Update is called once per frame
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void OnDisable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     void Update()
     {
-        pitch += 60 * Time.deltaTime * Input.GetAxis("Vertical");
-        yaw += 60 * Time.deltaTime * Input.GetAxis("Horizontal");
+        pitch -= Input.GetAxis("Mouse Y");
+        yaw += Input.GetAxis("Mouse X");
         transform.localRotation = Quaternion.identity;
         transform.Rotate( pitch, yaw, 0 );
     }
