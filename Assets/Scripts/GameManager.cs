@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         TimeLeft = timeLimit;   
     }
 
@@ -24,6 +26,8 @@ public class GameManager : MonoBehaviour
         TimeLeft -= Time.deltaTime;
         if( TimeLeft <= 0 )
         {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             GameOver.Invoke();
             enabled = false;
         }

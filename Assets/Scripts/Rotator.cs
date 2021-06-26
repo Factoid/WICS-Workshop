@@ -10,15 +10,6 @@ public class Rotator : MonoBehaviour
     private float yaw;
     private float pitch;
     // Update is called once per frame
-    private void OnEnable()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    private void OnDisable()
-    {
-        Cursor.lockState = CursorLockMode.None;
-    }
 
     void Update()
     {

@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AITargeting.cs" />
+    <Compile Include="Assets\PlayerFire.cs" />
     <Compile Include="Assets\Scripts\Driver.cs" />
     <Compile Include="Assets\Scripts\ExplodeOnContact.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

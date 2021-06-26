@@ -10,18 +10,21 @@ public class Shooter : MonoBehaviour
     private GameObject prefab;
     [SerializeField]
     private float fireSpeed = 20.0f;
+    [SerializeField]
+    private Rigidbody refFrame;
 
     // Update is called once per frame
-    void Update()
+    public void Fire()
     {
-        if( Input.GetButtonDown("Fire1") )
-        {
-            var obj = Instantiate(prefab);
-            obj.transform.position = spawnPoint.position;
-            obj.transform.forward = spawnPoint.forward;
+        var obj = Instantiate(prefab);
+        obj.transform.position = spawnPoint.position;
+        obj.transform.forward = spawnPoint.forward;
 
-            var rbody = obj.GetComponent<Rigidbody>();
-            rbody.velocity = obj.transform.forward * fireSpeed;
+        var rbody = obj.GetComponent<Rigidbody>();
+        rbody.velocity = obj.transform.forward * fireSpeed;
+        if( refFrame != null )
+        {
+            rbody.velocity += refFrame.velocity;
         }
     }
 }
